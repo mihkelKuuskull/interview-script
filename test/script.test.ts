@@ -11,8 +11,9 @@ describe('EXAMPLE TESTS', () => {
         chai.use(deepEqualInAnyOrder);
         disableLogs();
     });
-    it('Should return correct count of missing transactions', async () => {
+    it.only('Should return correct count of missing transactions', async () => {
         await fixTransactions();
+        console.log('lammas');
         const results = await getResults();
         expect(results.length).to.eq(3);
     });
