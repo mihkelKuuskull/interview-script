@@ -1,4 +1,4 @@
-# INTERVIEW SCRIPT
+# RETRIEVE MISSING DEPOSITS
 
 Our payments system recently suffered a network outage and we have lots of users in customer support asking about missing deposits.  
 We have provided you 2 csv files in `src/files` folder:  
