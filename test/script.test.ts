@@ -43,5 +43,5 @@ describe('EXAMPLE TESTS', () => {
 });
 
 async function getResults() {
-    return readCsvFile(path.resolve(__dirname, '../src/files/result.csv'));
+    return readCsvFile(path.resolve(__dirname, '../src/files/missingTransactions.csv'));
 }
