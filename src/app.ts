@@ -1,4 +1,4 @@
-import { fixTransactions } from './script';
+import { createMissingTransactionsReport } from './script';
 import { runScript } from './tools/scriptRunner';
 
-runScript(fixTransactions);
+runScript(createMissingTransactionsReport);

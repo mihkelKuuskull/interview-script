@@ -3,7 +3,7 @@ import chai, { expect } from 'chai';
 import deepEqualInAnyOrder from 'deep-equal-in-any-order';
 import path from 'path';
 import { disableLogs } from '../src/tools/logger';
-import { fixTransactions } from '../src/script';
+import { createMissingTransactionsReport } from '../src/script';
 import { readCsvFile } from '../src/tools/csv';
 
 describe('EXAMPLE TESTS', () => {
@@ -12,12 +12,12 @@ describe('EXAMPLE TESTS', () => {
         disableLogs();
     });
     it('Should return correct count of missing transactions', async () => {
-        await fixTransactions();
+        await createMissingTransactionsReport();
         const results = await getResults();
         expect(results.length).to.eq(3);
     });
     it('Should have transactions in result file with correct format', async () => {
-        await fixTransactions();
+        await createMissingTransactionsReport();
         const results = await getResults();
         expect(results).to.deep.equalInAnyOrder([
             {
